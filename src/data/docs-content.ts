@@ -1,0 +1,306 @@
+export interface DocContent {
+  id: string;
+  title: string;
+  path: string;
+  section: string;
+  content: string;
+}
+
+export const docsContent: DocContent[] = [
+  // Getting Started
+  {
+    id: 'introduction',
+    title: 'Introduction',
+    path: '/docs/getting-started/introduction',
+    section: 'Getting Started',
+    content: 'Welcome to Rustpress, a modern, high-performance content management system built with Rust. Rustpress combines the power of Rust with an intuitive developer experience to create fast, secure, and scalable websites. Learn about the core concepts, architecture, and how Rustpress differs from traditional CMS platforms.',
+  },
+  {
+    id: 'installation',
+    title: 'Installation',
+    path: '/docs/getting-started/installation',
+    section: 'Getting Started',
+    content: 'Install Rustpress using Cargo, the Rust package manager. Requirements include Rust 1.70 or higher and a PostgreSQL or SQLite database. Follow our step-by-step installation guide to get Rustpress running on your local machine or server.',
+  },
+  {
+    id: 'quick-start',
+    title: 'Quick Start',
+    path: '/docs/getting-started/quick-start',
+    section: 'Getting Started',
+    content: 'Get up and running with Rustpress in under 5 minutes. Create your first project, configure the database, and launch the development server. This guide covers the essential commands and configuration needed for a basic Rustpress site.',
+  },
+  {
+    id: 'project-structure',
+    title: 'Project Structure',
+    path: '/docs/getting-started/project-structure',
+    section: 'Getting Started',
+    content: 'Understand the Rustpress project structure including the content directory, themes folder, plugins directory, configuration files, and the public assets folder. Learn where to place your themes, plugins, and static assets.',
+  },
+  {
+    id: 'configuration',
+    title: 'Configuration',
+    path: '/docs/getting-started/configuration',
+    section: 'Getting Started',
+    content: 'Configure Rustpress using the rustpress.toml file. Set up database connections, server settings, caching options, and site metadata. Learn about environment variables and configuration best practices.',
+  },
+  {
+    id: 'cli-commands',
+    title: 'CLI Commands',
+    path: '/docs/getting-started/cli-commands',
+    section: 'Getting Started',
+    content: 'Master the Rustpress CLI with commands for starting the server, managing content, creating themes and plugins, database migrations, and development utilities. Includes all available flags and options.',
+  },
+
+  // Theme Development
+  {
+    id: 'theme-basics',
+    title: 'Theme Basics',
+    path: '/docs/themes/basics',
+    section: 'Theme Development',
+    content: 'Learn the fundamentals of Rustpress theme development. Understand how themes work, the rendering pipeline, template syntax, and how to create your first theme from scratch.',
+  },
+  {
+    id: 'theme-structure',
+    title: 'Theme Structure',
+    path: '/docs/themes/structure',
+    section: 'Theme Development',
+    content: 'Explore the required file structure for a Rustpress theme including index.html, style.css, theme.json, templates directory, partials, and asset folders. Understand the purpose of each file.',
+  },
+  {
+    id: 'template-hierarchy',
+    title: 'Template Hierarchy',
+    path: '/docs/themes/template-hierarchy',
+    section: 'Theme Development',
+    content: 'Master the Rustpress template hierarchy to understand which template files are used for different types of content. Learn about single, archive, category, tag, page, and custom templates.',
+  },
+  {
+    id: 'template-tags',
+    title: 'Template Tags',
+    path: '/docs/themes/template-tags',
+    section: 'Theme Development',
+    content: 'Use template tags to display dynamic content in your themes. Learn about title tags, content tags, meta tags, loop tags, conditional tags, and how to create custom template tags.',
+  },
+  {
+    id: 'theme-json',
+    title: 'theme.json Configuration',
+    path: '/docs/themes/theme-json',
+    section: 'Theme Development',
+    content: 'Configure your theme using theme.json including name, version, author, description, required plugins, supported features, color palettes, typography settings, and layout options.',
+  },
+  {
+    id: 'styling',
+    title: 'Styling & CSS',
+    path: '/docs/themes/styling',
+    section: 'Theme Development',
+    content: 'Best practices for styling Rustpress themes. Learn about CSS organization, using CSS custom properties, responsive design patterns, dark mode support, and optimizing stylesheets.',
+  },
+  {
+    id: 'assets',
+    title: 'Assets Management',
+    path: '/docs/themes/assets',
+    section: 'Theme Development',
+    content: 'Manage theme assets including JavaScript files, images, fonts, and other static resources. Learn about asset enqueueing, minification, bundling, and cache busting.',
+  },
+  {
+    id: 'theme-hooks',
+    title: 'Theme Hooks',
+    path: '/docs/themes/hooks',
+    section: 'Theme Development',
+    content: 'Extend theme functionality using hooks. Learn about action hooks for inserting content and filter hooks for modifying data. Understand hook priorities and callback functions.',
+  },
+  {
+    id: 'responsive-design',
+    title: 'Responsive Design',
+    path: '/docs/themes/responsive',
+    section: 'Theme Development',
+    content: 'Create responsive Rustpress themes that work across all devices. Learn about mobile-first design, breakpoints, flexible layouts, responsive images, and testing strategies.',
+  },
+  {
+    id: 'theme-testing',
+    title: 'Testing Themes',
+    path: '/docs/themes/testing',
+    section: 'Theme Development',
+    content: 'Test your Rustpress themes for quality and compatibility. Learn about visual testing, cross-browser testing, performance testing, accessibility testing, and automated testing tools.',
+  },
+  {
+    id: 'theme-publishing',
+    title: 'Publishing Themes',
+    path: '/docs/themes/publishing',
+    section: 'Theme Development',
+    content: 'Publish your theme to the Rustpress theme directory. Learn about submission requirements, review process, versioning, documentation, and marketing your theme.',
+  },
+
+  // Plugin Development
+  {
+    id: 'plugin-basics',
+    title: 'Plugin Basics',
+    path: '/docs/plugins/basics',
+    section: 'Plugin Development',
+    content: 'Introduction to Rustpress plugin development. Learn how plugins extend core functionality, the plugin lifecycle, and how to create your first Hello World plugin.',
+  },
+  {
+    id: 'plugin-structure',
+    title: 'Plugin Structure',
+    path: '/docs/plugins/structure',
+    section: 'Plugin Development',
+    content: 'Understand the required file structure for Rustpress plugins including the main plugin file, lib.rs, plugin.toml configuration, assets, and module organization.',
+  },
+  {
+    id: 'hooks-actions',
+    title: 'Hooks & Actions',
+    path: '/docs/plugins/hooks-actions',
+    section: 'Plugin Development',
+    content: 'Use hooks and actions to extend Rustpress functionality. Learn about available action hooks, how to register callbacks, hook priorities, and creating custom actions.',
+  },
+  {
+    id: 'filters',
+    title: 'Filters',
+    path: '/docs/plugins/filters',
+    section: 'Plugin Development',
+    content: 'Modify data using filter hooks. Learn how filters work, available filters, creating custom filters, and best practices for filter functions.',
+  },
+  {
+    id: 'database',
+    title: 'Database Access',
+    path: '/docs/plugins/database',
+    section: 'Plugin Development',
+    content: 'Access the database from plugins using the Rustpress database API. Learn about queries, creating custom tables, migrations, and database best practices.',
+  },
+  {
+    id: 'rest-api',
+    title: 'REST API Extensions',
+    path: '/docs/plugins/rest-api',
+    section: 'Plugin Development',
+    content: 'Extend the Rustpress REST API with custom endpoints. Learn about route registration, request handling, response formatting, and authentication.',
+  },
+  {
+    id: 'admin-pages',
+    title: 'Admin Pages',
+    path: '/docs/plugins/admin-pages',
+    section: 'Plugin Development',
+    content: 'Create admin pages for your plugins. Learn about menu registration, page rendering, form handling, and integrating with the admin interface.',
+  },
+  {
+    id: 'settings-api',
+    title: 'Settings API',
+    path: '/docs/plugins/settings-api',
+    section: 'Plugin Development',
+    content: 'Store and retrieve plugin settings using the Settings API. Learn about registering settings, creating settings pages, validation, and sanitization.',
+  },
+  {
+    id: 'security',
+    title: 'Security Best Practices',
+    path: '/docs/plugins/security',
+    section: 'Plugin Development',
+    content: 'Write secure Rustpress plugins. Learn about input validation, output escaping, capability checks, nonces, SQL injection prevention, and XSS protection.',
+  },
+  {
+    id: 'plugin-testing',
+    title: 'Testing Plugins',
+    path: '/docs/plugins/testing',
+    section: 'Plugin Development',
+    content: 'Test your Rustpress plugins for reliability. Learn about unit testing, integration testing, mocking, test fixtures, and continuous integration.',
+  },
+  {
+    id: 'plugin-publishing',
+    title: 'Publishing Plugins',
+    path: '/docs/plugins/publishing',
+    section: 'Plugin Development',
+    content: 'Publish your plugin to the Rustpress plugin directory. Learn about submission guidelines, review criteria, versioning, updates, and documentation.',
+  },
+
+  // API Reference
+  {
+    id: 'api-overview',
+    title: 'API Overview',
+    path: '/docs/api/overview',
+    section: 'API Reference',
+    content: 'Overview of the Rustpress API including core functions, hooks, filters, database access, and REST endpoints. Understand the API architecture and conventions.',
+  },
+  {
+    id: 'core-functions',
+    title: 'Core Functions',
+    path: '/docs/api/core-functions',
+    section: 'API Reference',
+    content: 'Complete reference of Rustpress core functions including get_post, get_posts, get_page, get_option, update_option, and content manipulation functions.',
+  },
+  {
+    id: 'hooks-reference',
+    title: 'Hooks Reference',
+    path: '/docs/api/hooks',
+    section: 'API Reference',
+    content: 'Complete list of available action hooks in Rustpress including init, content_loaded, before_render, after_render, and lifecycle hooks.',
+  },
+  {
+    id: 'filters-reference',
+    title: 'Filters Reference',
+    path: '/docs/api/filters',
+    section: 'API Reference',
+    content: 'Complete list of available filter hooks in Rustpress including the_title, the_content, the_excerpt, and data transformation filters.',
+  },
+  {
+    id: 'database-api',
+    title: 'Database API',
+    path: '/docs/api/database',
+    section: 'API Reference',
+    content: 'Database API reference including query builders, model definitions, migrations, transactions, and raw SQL execution.',
+  },
+  {
+    id: 'rest-endpoints',
+    title: 'REST Endpoints',
+    path: '/docs/api/rest-endpoints',
+    section: 'API Reference',
+    content: 'Complete REST API endpoint reference including posts, pages, users, media, settings, and custom endpoints. Includes request and response formats.',
+  },
+  {
+    id: 'authentication',
+    title: 'Authentication',
+    path: '/docs/api/authentication',
+    section: 'API Reference',
+    content: 'Authentication API reference including JWT tokens, OAuth, API keys, session management, and capability checks.',
+  },
+  {
+    id: 'error-handling',
+    title: 'Error Handling',
+    path: '/docs/api/error-handling',
+    section: 'API Reference',
+    content: 'Error handling reference including error types, error codes, logging, and graceful error recovery patterns.',
+  },
+  {
+    id: 'types',
+    title: 'Type Definitions',
+    path: '/docs/api/types',
+    section: 'API Reference',
+    content: 'Complete type definitions for Rustpress including Post, Page, User, Media, Settings, and all API response types.',
+  },
+
+  // Examples
+  {
+    id: 'theme-examples',
+    title: 'Theme Examples',
+    path: '/docs/examples/themes',
+    section: 'Examples',
+    content: 'Real-world theme examples including a blog theme, portfolio theme, e-commerce theme, and documentation theme. Complete source code with explanations.',
+  },
+  {
+    id: 'plugin-examples',
+    title: 'Plugin Examples',
+    path: '/docs/examples/plugins',
+    section: 'Examples',
+    content: 'Real-world plugin examples including SEO plugin, contact form plugin, analytics plugin, and social sharing plugin. Complete source code with explanations.',
+  },
+  {
+    id: 'api-examples',
+    title: 'API Usage Examples',
+    path: '/docs/examples/api',
+    section: 'Examples',
+    content: 'API usage examples showing common patterns for fetching content, creating custom queries, and integrating with external services.',
+  },
+  {
+    id: 'playground',
+    title: 'Code Playground',
+    path: '/docs/examples/playground',
+    section: 'Examples',
+    content: 'Interactive code playground to experiment with Rustpress code. Write and run theme templates, plugin code, and API calls in real-time.',
+  },
+];
