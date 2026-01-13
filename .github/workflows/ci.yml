@@ -2,35 +2,19 @@ name: CI
 
 on:
   push:
-    branches: [main, release, development]
+    branches: [main, master, develop]
   pull_request:
-    branches: [main, release, development]
+    branches: [main, master]
 
 jobs:
-  build:
-    name: Build and Test
+  ci:
+    name: CI
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: rustpress-net/rustpress-core-devops/actions/ci-node@main
         with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Type check
-        run: npm run lint || true
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
+          run_tests: 'false'
+          run_lint: 'true'
+          run_build: 'true'
